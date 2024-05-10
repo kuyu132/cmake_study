@@ -5,5 +5,5 @@
 #include <iostream>
 
 void printResult(int x) {
-    std::cout << "result is" << x << std::endl;
+    std::cout << "result is " << x << std::endl;
 }
