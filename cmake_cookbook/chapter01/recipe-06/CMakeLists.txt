@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 message(STATUS "Is the c++ compiler loaded? ${CMAKE_CXX_COMPILER_LOADED}")
 
 #通过命令指定编译器：cmake -D CMAKE_CXX_COMPILER=clang++ ..
+#通过这个指令打印所有的信息：cmake --system-information information.txt
 if (CMAKE_CXX_COMPILER_LOADED)
     message(STATUS "The c++ compiler ID is: ${CMAKE_CXX_COMPILER_ID}")
     message(STATUS "Is the c++ from GNU? ${CMAKE_COMPILER_IS_GNUCXX}")
