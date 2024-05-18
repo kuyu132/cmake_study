@@ -34,6 +34,7 @@ add_library(geometry STATIC
         ../geometry_square.hpp
 )
 
+#同时指定debug和release两种编译配置
 target_compile_options(geometry
         PRIVATE
         ${CXX_FLAGS}
