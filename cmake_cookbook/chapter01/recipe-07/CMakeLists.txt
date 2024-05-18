@@ -7,6 +7,7 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE  Release CACHE STRING "Build type" FORCE)
 endif ()
 
+#cmake .. -G"Visual Studio 12 2017 Win64" -D CMAKE_CONFIGURATION_TY #PES="Release;Debug"
 #cmake -D CMAKE_BUILD_TYPE=Debug ..
 #通过指定编译的类型控制产物，默认为release
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
