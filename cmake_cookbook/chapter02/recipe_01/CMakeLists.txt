@@ -3,6 +3,7 @@ project(recipe_01)
 
 set(CMAKE_CXX_STANDARD 17)
 
+#不同的平台
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     message(STATUS "Configuring on/for Linux")
 elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
