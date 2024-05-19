@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.27)
+project(recipe_01)
+
+set(CMAKE_CXX_STANDARD 17)
+
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    message(STATUS "Configuring on/for Linux")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+    message(STATUS "Configuring on/for MacOS")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    message(STATUS "Configuring on/for Windows")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "AIX")
+    message(STATUS "Configuring on/for IBM AIX")
+else()
+    message(STATUS "Configuring on/for ${CMAKE_SYSTEM_NAME}")
+endif ()
+
+add_executable(recipe_01 main.cpp)
+
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    target_compile_definitions(recipe_01 PUBLIC "IS_LINUX")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+    target_compile_definitions(recipe_01 PUBLIC "IS_MACOS")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    target_compile_definitions(recipe_01 PUBLIC "IS_WINDOWS")
+elseif (CMAKE_SYSTEM_NAME STREQUAL "AIX")
+    target_compile_definitions(recipe_01 PUBLIC "IS_AIX")
+endif ()
