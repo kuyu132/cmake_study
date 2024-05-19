@@ -14,7 +14,20 @@ std::string say_hello() {
 #endif
 }
 
+std::string say_hello1() {
+#ifdef IS_INTEL_CXX_COMPILER
+    return std::string("Hello Intel compiler!");
+#elif IS_GNU_CXX_COMPILER
+    return std::string("Hello GNU compiler!");
+#elif IS_PGI_CXX_COMPILER
+    return std::string("Hello PGI compiler!");
+#elif IS_APPLECLANG_CXX_COMPILER
+    return std::string("Hello AppleClang compiler!");
+#endif
+}
+
 int main() {
     std::cout << say_hello() << std::endl;
+    std::cout << say_hello1() << std::endl;
     return 0;
 }
